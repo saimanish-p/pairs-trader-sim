@@ -299,4 +299,3 @@ def run_strategy():
     
     return results
 
-
