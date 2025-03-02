@@ -13,7 +13,7 @@ def main():
 
     # Set page config
     st.set_page_config(
-        page_icon="📈",
+        page_icon="🍐",
         layout="centered"
     )
 
