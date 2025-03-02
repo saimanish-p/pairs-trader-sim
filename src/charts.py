@@ -273,7 +273,7 @@ def display_results():
     st.markdown("---")
     
     st.caption("Note:")
-    st.write("The following are the results of a rudimentary Pairs-Trader strategy implemented with Aluminium and Lead as our chosen asset pair. This strategy is not tradeable and is for education purposes ONLY.")
+    st.write("The following are the results of a rudimentary Pairs-Trader strategy implemented with Aluminium and Lead as our chosen asset pair with data ranging from 1st April 2014 to 1st July 2016. This strategy is not tradeable and is for education purposes ONLY.")
     st.write("Read the documentation (README.md file) highlighting all assumptions, limitations, and future improvements for this project.")
     
     st.markdown("---")
