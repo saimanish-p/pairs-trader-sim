@@ -2,7 +2,7 @@
 from src.styling import render_header
 
 # From charts.py
-from src.charts import plot_pnl, display_results
+from src.charts import plot_pnl, plot_asset_prices, plot_performance_metrics, plot_spread, plot_zscore, display_results
 
 # From trader.py
 from src.trader import (
@@ -28,6 +28,10 @@ __all__ = [
     
     # charts.py
     'plot_pnl',
+    'plot_asset_prices',
+    'plot_zscore',
+    'plot_spread',
+    'plot_performance_metrics',
     'display_results',
     
     # trader.py
