@@ -5,10 +5,10 @@ def get_params():
     st.sidebar.header("Strategy Parameters")
     
     params = {
-        'threshold': st.sidebar.slider("Z-score Threshold", 1.0, 3.0, 1.75),
-        'lookback_period': st.sidebar.slider("Lookback Period", 60, 120, 90),
-        'initial_start': st.sidebar.number_input("Initial Start Index", min_value=0, max_value=100, value=80, help="Starting index for the initial z-score calculation window"),
-        'initial_end': st.sidebar.number_input("Initial End Index", min_value=10, max_value=110, value=90, help="Ending index for the initial z-score calculation window"),
+        'threshold': st.sidebar.slider("Z-score Threshold", 1.0, 3.0, 1.25),
+        'lookback_period': st.sidebar.slider("Lookback Period", 40, 120, 40),
+        'initial_start': st.sidebar.number_input("Initial Start Index", min_value=0, max_value=100, value=10, help="Starting index for the initial z-score calculation window"),
+        'initial_end': st.sidebar.number_input("Initial End Index", min_value=10, max_value=110, value=30, help="Ending index for the initial z-score calculation window"),
         'lot_size_1': st.sidebar.number_input("Lot Size Asset 1", 1000, 10000, 5000),
         'lot_size_2': st.sidebar.number_input("Lot Size Asset 2", 1000, 10000, 5000),
         'stop_loss': st.sidebar.number_input("Stop Loss", -20000, 0, -10000),
