@@ -1,18 +1,60 @@
 import streamlit as st
 
 def get_params():
-
     st.sidebar.header("Strategy Parameters")
     
     params = {
-        'threshold': st.sidebar.slider("Z-score Threshold", 1.0, 3.0, 1.25),
-        'lookback_period': st.sidebar.slider("Lookback Period", 40, 120, 40),
-        'initial_start': st.sidebar.number_input("Initial Start Index", min_value=0, max_value=100, value=10, help="Starting index for the initial z-score calculation window"),
-        'initial_end': st.sidebar.number_input("Initial End Index", min_value=10, max_value=110, value=30, help="Ending index for the initial z-score calculation window"),
-        'lot_size_1': st.sidebar.number_input("Lot Size Asset 1", 1000, 10000, 5000),
-        'lot_size_2': st.sidebar.number_input("Lot Size Asset 2", 1000, 10000, 5000),
-        'stop_loss': st.sidebar.number_input("Stop Loss", -20000, 0, -10000),
-        'take_profit': st.sidebar.number_input("Take Profit", 0, 50000, 20000)
+        'threshold': st.sidebar.slider(
+            "Z-score Threshold", 
+            1.0, 3.0, 1.25, 
+            help="Determines when to enter/exit trades. Higher values (e.g., 2.0) are more conservative, requiring larger divergences. Lower values (e.g., 1.0) generate more frequent trades but may include false signals."
+        ),
+        
+        'lookback_period': st.sidebar.slider(
+            "Lookback Period", 
+            40, 120, 40, 
+            help="Number of days used to calculate statistical relationships. Shorter periods (40-60 days) adapt quickly to changing markets but may be less stable. Longer periods (80-120 days) provide more statistical robustness but react slower to market changes."
+        ),
+        
+        'initial_start': st.sidebar.number_input(
+            "Initial Start Index", 
+            min_value=0, 
+            max_value=100, 
+            value=10, 
+            help="Starting point within the lookback period for initial z-score calculation. This creates a 'training window' for establishing the baseline relationship between assets."
+        ),
+        
+        'initial_end': st.sidebar.number_input(
+            "Initial End Index", 
+            min_value=10, 
+            max_value=110, 
+            value=30, 
+            help="Ending point within the lookback period for initial z-score calculation. The difference between end and start indices determines the size of the training window."
+        ),
+        
+        'lot_size_1': st.sidebar.number_input(
+            "Lot Size (Aluminium)", 
+            1000, 10000, 5000, 
+            help="Trading quantity for Aluminium in USD. Larger lot sizes increase potential profit/loss and affect the capital efficiency of the strategy."
+        ),
+        
+        'lot_size_2': st.sidebar.number_input(
+            "Lot Size (Lead)", 
+            1000, 10000, 5000, 
+            help="Trading quantity for Lead in USD. Ideally balanced with Aluminium lot size to create a market-neutral position that hedges against overall market movements."
+        ),
+        
+        'stop_loss': st.sidebar.number_input(
+            "Stop Loss", 
+            -20000, 0, -10000, 
+            help="Maximum acceptable loss in USD before automatically exiting a trade. More negative values allow more room for the strategy to work through temporary adverse movements."
+        ),
+        
+        'take_profit': st.sidebar.number_input(
+            "Take Profit", 
+            0, 50000, 20000, 
+            help="Target profit in USD at which the strategy automatically exits a profitable trade. Higher values allow trades to capture more profit from strong convergence moves."
+        )
     }
     
     return params
