@@ -14,11 +14,10 @@ def main():
     # Set page config
     st.set_page_config(
         page_icon="📈",
-        layout="wide"
+        layout="centered"
     )
 
     render_header()
-
     display_results()
 
 if __name__ == "__main__":
