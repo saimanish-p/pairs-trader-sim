@@ -126,7 +126,7 @@ Our final figure with multiple subplots, essentially visualises the same perform
 
 ![Performance Visualisation](images/performance_viz_graph.png)
 
-Lastly, we have a trade log allowing the user to analyse each trade entered, exited, or avoided based off their chosen parameters in a formatted table containing all the key variables relevant to this simple implementation of a pairs trading strategy. 
+Lastly, we present a trade log allowing the user to analyse each trade entered, exited, or avoided based off their chosen parameters in a formatted table containing all the key variables relevant to this simple implementation of a pairs trading strategy. 
 
 ![Trade Log](images/trade_log_example_graph.png)
 
