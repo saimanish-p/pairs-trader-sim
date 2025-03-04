@@ -130,7 +130,7 @@ Lastly, we present a trade log allowing the user to analyse each trade entered, 
 
 ![Trade Log](images/trade_log_example_graph.png)
 
-## Assumptions, Limitations, and Future Improvements
+## Assumptions, Limitations, and Suggested Future Improvements
 
 
 
