@@ -12,11 +12,11 @@ A basic pairs trading simulator implemented with a single asset pair (Aluminium 
 of Statistical Arbitrage trading. 
 
 The project allows user to customise several key parameters such as z-score threshold, lookback period, initial 
-start and end index, lot sizes, stop loss, and take profit levels enablingflexible strategy testing. The user can 
-analyse performance metrics of the strategy based on their inputs and visualise the results using a minimalistic 
-dashboard and intuitive charts. Lastly, the project also provides the user a trade log covering all decisions made 
-by the model during the trading data range (01/04/2014 - 01/07/2016) including BUY, SELL, and HOLD signals alongisde asset 
-prices of both Aluminium and Lead, z-scores, buy and sell prices, MTM, PnL, and cointegration status. 
+start and end index, lot sizes, stop loss, and take profit levels enablingflexible strategy testing. 
+
+The user can analyse performance metrics of the strategy based on their inputs and visualise the results using a minimalistic dashboard and intuitive charts. 
+
+Lastly, the project also provides the user a trade log covering all decisions made by the model during the trading data range (01/04/2014 - 01/07/2016) including BUY, SELL, and HOLD signals alongisde asset prices of both Aluminium and Lead, z-scores, buy and sell prices, MTM, PnL, and cointegration status. 
 
 ## Built with
 
