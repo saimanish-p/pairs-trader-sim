@@ -106,20 +106,41 @@ later in this file.
 
 ![Performance Metrics](images/performance_metrics_example.png)
 
-Following that section, you will be greeted by a series of charts, starting with PnL of the strategy over the trading period.
+Following that section, you will be greeted by a series of figures, starting with PnL of the strategy over the trading period.
 
 ![Profit and Loss graph](images/Example_PnL_graph.png)
 
-The second plot, and perhaps the only static plot (i.e. not affected by user parameters) is the 'Close' prices of Aluminium and Lead
-respectively which make up our asset pair for this sim. 
+The second figure, and one of two static figures (i.e. not affected by user parameters) is the 'Close' prices of Aluminium and Lead respectively which make up our asset pair for this sim. 
 
 ![Aluminium and Lead Prices](images/Aluminium_and_Lead_Prices_graph.png)
 
-The subsequent plot, illustrates the z-score line alongside the threshold lines (both +ve and -ve) which each represent
-the sell and buy zones respectively highlighted using appropriate red and green fill. This plot essentially visualises 
-the signal generation logic of our pairs trader.
+The subsequent figure, illustrates the z-score line alongside the threshold lines (both +ve and -ve) which each represent the sell and buy zones respectively highlighted using appropriate red and green fill. This figure essentially visualises the signal generation logic of our pairs trader.
 
 ![Z-score Over Time](images/Z-score_graph.png)
+
+Similar to the price figure of the asset pair, the spread between Aluminium and Lead is also a static figure. We visualise the log price ratio with the 30 day Moving Average.
+
+![Price Spread](images/price_spread_graph.png)
+
+Our final figure with multiple subplots, essentially visualises the same performance metrics from our mini-dashaboard in the first section, rounding up our visual analysis of the strategy.  
+
+![Performance Visualisation](images/performance_viz_graph.png)
+
+Lastly, we have a trade log allowing the user to analyse each trade entered, exited, or avoided based off their chosen parameters in a formatted table containing all the key variables relevant to this simple implementation of a pairs trading strategy. 
+
+![Trade Log](images/trade_log_example_graph.png)
+
+## Assumptions, Limitations, and Future Improvements
+
+
+
+
+
+
+
+
+
+
 
 
 
