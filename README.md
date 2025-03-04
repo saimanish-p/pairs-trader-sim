@@ -80,12 +80,12 @@ below if you can't stand my voice!
 
 Adjust the parameters from default values to change strategy logic.
 
-[Input Parameters](images/input_parameters.png)
+![Input Parameters](images/input_parameters.png)
 
 If you are unsure what the variable represents, please hover over the question mark symbol beside the specific 
 parameter for additional context. 
 
-[Help Functionality](images/help_functionality_input_parameters.png)
+![Help Functionality](images/help_functionality_input_parameters.png)
 
 A lot of the project's strategy/logic has been pre-validated and is contained within the code, the only message a user 
 will see is if the initial start price (i.e. Starting point within the lookback period for initial z-score calculation)
@@ -94,7 +94,7 @@ following prompt being displayed.
 
 Note that future updates will allow user to check specified logs.
 
-[Error handling](images/validation-error_handling.png)
+![Error handling](images/validation-error_handling.png)
 
 The first thing you will see after customising the input parameters to your choosing is the performance metrics section
 which essentially displays a top-level overview of the strategy's performance highlighting specific metrics such as 
@@ -104,22 +104,22 @@ Note that the results illustrated below are based on the 'best' default paramete
 varies upon customisation of parameters. For details on technical assumptions / limitations, refer to relevant sections
 later in this file. 
 
-[Performance Metrics](images/performance_metrics_example.png)
+![Performance Metrics](images/performance_metrics_example.png)
 
 Following that section, you will be greeted by a series of charts, starting with PnL of the strategy over the trading period.
 
-[Profit and Loss graph](images/Example_PnL_graph.png)
+![Profit and Loss graph](images/Example_PnL_graph.png)
 
 The second plot, and perhaps the only static plot (i.e. not affected by user parameters) is the 'Close' prices of Aluminium and Lead
 respectively which make up our asset pair for this sim. 
 
-[Aluminium and Lead Prices](images/Aluminium_and_Lead_Prices_graph.png)
+![Aluminium and Lead Prices](images/Aluminium_and_Lead_Prices_graph.png)
 
 The subsequent plot, illustrates the z-score line alongside the threshold lines (both +ve and -ve) which each represent
 the sell and buy zones respectively highlighted using appropriate red and green fill. This plot essentially visualises 
 the signal generation logic of our pairs trader.
 
-[Z-score Over Time](images/Z-score_graph.png)
+![Z-score Over Time](images/Z-score_graph.png)
 
 
 
