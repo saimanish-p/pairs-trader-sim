@@ -172,7 +172,7 @@ Statistical arbitrage (stat arb) is a quantitative trading strategy that exploit
 
 Stat arb is based on the principle of mean reversion, which assumes that asset prices tend to revert to their historical average over time. Let \(P_t\) represent the price of an asset at time \(t\). The mean-reverting process can be expressed as:
 
-<p align="center"><img src="https://latex.codecogs.com/svg.latex?dP_t%20=%20\theta%20(\mu%20-%20P_t)dt%20+%20\sigma%20dW_t" /></p>
+$$dP_t = \theta (\mu - P_t)dt + \sigma dW_t$$
 
 where:
 - \(\mu\): Long-term mean of the asset price  
