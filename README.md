@@ -63,7 +63,7 @@ pip install -r requirements.txt
 ```
 ### 3. Change git remote url to avoid accidental pushes to base project
 ```bash
-git remote set-url origin github_username/options-strat-payoff
+git remote set-url origin github_username/pairs-trader-sim
 git remote -v # confirm the changes
 ```
 ## Usage
