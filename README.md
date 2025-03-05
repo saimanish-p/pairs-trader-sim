@@ -182,7 +182,7 @@ where:
 
 ### Cointegration and Pairs Trading
 
-Pairs trading involves identifying two assets with a long-term equilibrium relationship. This is typically tested through cointegration. Two price series \(X_t\) and \(Y_t\) are cointegrated if there exists a \(\beta\) such that the residual \(z_t\) is stationary:
+Pairs trading involves identifying two assets with a long-term equilibrium relationship. This is typically tested through cointegration. Two price series $$(X_t\)$$ and $$(Y_t\)$$ are cointegrated if there exists a $$(\beta\)$$ such that the residual $$(z_t\)$$ is stationary:
 
 $$z_t = Y_t - \beta X_t$$
 
@@ -190,7 +190,7 @@ The augmented Dickey-Fuller (ADF) test is commonly used to check for stationarit
 
 ### Z-Score Calculation
 
-To quantify the divergence from the mean, the spread \(z_t\) is standardized using the Z-score:
+To quantify the divergence from the mean, the spread $$(z_t\)$$ is standardized using the Z-score:
 
 $$Z_t = \frac{z_t - \mu_z}{\sigma_z}$$
 
@@ -198,7 +198,7 @@ where:
 - $$\mu_z$$: Mean of the spread  
 - $$\sigma_z$$: Standard deviation of the spread
 
-A Z-score above a threshold \(\alpha\) suggests a short position on the spread, while a Z-score below \(-\alpha\) suggests a long position.
+A Z-score above a threshold $$(\alpha\)$$ suggests a short position on the spread, while a Z-score below $$(-\alpha\)$$ suggests a long position.
 
 ### Trade Execution
 
