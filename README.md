@@ -12,7 +12,7 @@ A basic pairs trading simulator implemented with a single asset pair (Aluminium 
 of Statistical Arbitrage trading. 
 
 The project allows user to customise several key parameters such as z-score threshold, lookback period, initial 
-start and end index, lot sizes, stop loss, and take profit levels enablingflexible strategy testing. 
+start and end index, lot sizes, stop loss, and take profit levels enabling flexible strategy testing. 
 
 The user can analyse performance metrics of the strategy based on their inputs and visualise the results using a minimalistic dashboard and intuitive charts. 
 
@@ -132,6 +132,37 @@ Lastly, we present a trade log allowing the user to analyse each trade entered, 
 
 ## Assumptions, Limitations, and Suggested Future Improvements
 
+### Assumptions
+
+- Statistical Model: Uses Augmented Dickey-Fuller (ADF) test for cointegration and static Z-score calculations
+- Execution: Assumes perfect trade execution at closing prices.
+- Position Sizing: Assumes fixed position sizing
+- Risk Management: Relies on basic stop-loss and take-profit thresholds
+- Technical Architecture: Assumes a sequential backtest without the capability for parallel or event-driven processing.
+
+### Limitations
+
+- Data Processing: Relies on static data sources and does not connect to live market feeds.
+- Cointegration Testing: Missing more robust methods like Johansen test that would better capture long-term relationships between assets.
+- Z-Score Calculation: Utilises a static, rolling window without considering changing market conditions or half-life analysis, limiting its ability to optimize entry/exit.
+- Execution: Does not model slippage, transaction costs, or market impact, resulting in unrealistic profit assumptions.
+- Position Sizing: Assumes fixed lot sizes instead of dynamic sizing based on volatility or risk parity, limiting risk management flexibility.
+- Risk Management: Basic risk controls like stop-loss and take-profit do not account for more advanced techniques such as VaR or expected shortfall.
+- Technical Architecture: The backtesting system is sequential, lacks parallel processing, and does not support real-time, event-driven trading. It also does not employ performance optimiaations like vectorized operations.
+
+## Suggested Future Improvements
+
+This implementation serves as a rudimentary educational tool and would require a more robust suite of methodological approaches to ensure it is suitable for live trading. 
+
+A production-grade strategy should address the following:
+
+- Real-Time Data Integration: Connect to live market feeds and enhance data cleaning
+- Enhanced Statistical Modeling: Adopt more robust cointegration methods and adaptive Z-score calculations.
+- Realistic Execution Modeling: Account for slippage, transaction costs, and market impact.
+- Dynamic Position Sizing: Implement volatility and risk-based position sizing.
+- Optimised Architecture: Enable parallel processing and event-driven design for faster, real-time execution.
+- Regime Detection and ML Integration: Use regime detection and machine learning for parameter optimisation.
+- Live Trading Infrastructure: Develop real-time monitoring, logging, and failover systems for operational resilience.
 
 
 
