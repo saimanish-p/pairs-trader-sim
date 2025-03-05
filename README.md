@@ -174,19 +174,17 @@ Stat arb is based on the principle of mean reversion, which assumes that asset p
 
 $$dP_t = \theta (\mu - P_t)dt + \sigma dW_t$$
 
-where:
-- \(\mu\): Long-term mean of the asset price  
-- \(\theta\): Rate of mean reversion  
-- \(\sigma\): Volatility of the asset price  
-- \(W_t\): Wiener process (Brownian motion)  
+where:  
+- $$\mu$$: Long-term mean of the asset price  
+- $$\theta$$: Rate of mean reversion  
+- $$\sigma$$: Volatility of the asset price  
+- $$W_t$$: Wiener process (Brownian motion) 
 
 ### Cointegration and Pairs Trading
 
 Pairs trading involves identifying two assets with a long-term equilibrium relationship. This is typically tested through cointegration. Two price series \(X_t\) and \(Y_t\) are cointegrated if there exists a \(\beta\) such that the residual \(z_t\) is stationary:
 
-\[
-    z_t = Y_t - \beta X_t
-\]
+$$z_t = Y_t - \beta X_t$$
 
 The augmented Dickey-Fuller (ADF) test is commonly used to check for stationarity.
 
@@ -194,13 +192,11 @@ The augmented Dickey-Fuller (ADF) test is commonly used to check for stationarit
 
 To quantify the divergence from the mean, the spread \(z_t\) is standardized using the Z-score:
 
-\[
-    Z_t = \frac{z_t - \mu_z}{\sigma_z}
-\]
+$$Z_t = \frac{z_t - \mu_z}{\sigma_z}$$
 
-where:
-- \(\mu_z\): Mean of the spread  
-- \(\sigma_z\): Standard deviation of the spread  
+where:  
+- $$\mu_z$$: Mean of the spread  
+- $$\sigma_z$$: Standard deviation of the spread
 
 A Z-score above a threshold \(\alpha\) suggests a short position on the spread, while a Z-score below \(-\alpha\) suggests a long position.
 
@@ -208,6 +204,6 @@ A Z-score above a threshold \(\alpha\) suggests a short position on the spread, 
 
 Trades are executed based on the Z-score:
 
-- Go long on \(Y_t\) and short on \(X_t\) when \(Z_t < -\alpha\)  
-- Go short on \(Y_t\) and long on \(X_t\) when \(Z_t > \alpha\)  
-- Close positions when \(Z_t\) reverts to zero  
+- Go long on $$Y_t$$ and short on $$X_t$$ when $$Z_t < -\alpha$$  
+- Go short on $$Y_t$$ and long on $$X_t$$ when $$Z_t > \alpha$$  
+- Close positions when $$Z_t$$ reverts to zero
