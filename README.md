@@ -150,7 +150,7 @@ Lastly, we present a trade log allowing the user to analyse each trade entered, 
 - Risk Management: Basic risk controls like stop-loss and take-profit do not account for more advanced techniques such as VaR or expected shortfall.
 - Technical Architecture: The backtesting system is sequential, lacks parallel processing, and does not support real-time, event-driven trading. It also does not employ performance optimiaations like vectorized operations.
 
-## Suggested Future Improvements
+### Suggested Future Improvements
 
 This implementation serves as a rudimentary educational tool and would require a more robust suite of methodological approaches to ensure it is suitable for live trading. 
 
