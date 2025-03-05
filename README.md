@@ -186,7 +186,8 @@ Pairs trading involves identifying two assets with a long-term equilibrium relat
 
 $$z_t = Y_t - \beta X_t$$
 
-The augmented Dickey-Fuller (ADF) test is commonly used to check for stationarity.
+The augmented Dickey-Fuller (ADF) test is commonly used to check for stationarity (However, it has its limitations such as - Assuming a linear mean-reverting process, and failing to capture non-linear mean 
+reversion mechanisms)
 
 ### Z-Score Calculation
 
@@ -201,9 +202,15 @@ where:
 A Z-score above a threshold $$(\alpha\)$$ suggests a short position on the spread, while a Z-score below $$(-\alpha\)$$ suggests a long position.
 
 ### Trade Execution
+Let:
+- $$X_t$$: Price of the first asset
+- $$Y_t$$: Price of the second asset
+- $$\alpha$$: Threshold for trade entry (typically 1-2 standard deviations)
+- $$Z_t$$: Standardized spread (Z-score)
 
-Trades are executed based on the Z-score:
+Trading rules:
+- Go long on $$Y_t$$ and short on $$X_t$$ when $$Z_t < -\alpha$$ (mean reversion trade entry)
+- Go short on $$Y_t$$ and long on $$X_t$$ when $$Z_t > \alpha$$ (mean reversion trade entry)
+- Close positions when $$Z_t$$ reverts to zero (trade exit condition)
 
-- Go long on $$Y_t$$ and short on $$X_t$$ when $$Z_t < -\alpha$$  
-- Go short on $$Y_t$$ and long on $$X_t$$ when $$Z_t > \alpha$$  
-- Close positions when $$Z_t$$ reverts to zero
+
