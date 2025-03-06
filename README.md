@@ -82,7 +82,7 @@ Adjust the parameters from default values to change strategy logic.
 
 ![Input Parameters](images/input_parameters.png)
 
-If you are unsure what the variable represents, please hover over the question mark symbol beside the specific 
+If you are unsure what the parameter represents, please hover over the question mark symbol beside the specific 
 parameter for additional context. 
 
 ![Help Functionality](images/help_functionality_input_parameters.png)
